@@ -13,7 +13,7 @@ CACHE_DIR=$2
 
 # 
 source "$BASEDIR/lib/misc_funcs.sh"
-source "$BASEDIR/lib/godot_funcs.sh"
+source "$BASEDIR/lib/godotfuncs.sh"
 
 export_env_dir() {
     env_dir=$1
