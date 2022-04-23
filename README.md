@@ -1,13 +1,13 @@
 # Heroku Godot Server buildpack
 
-A simple Heroku buildpack to deploy and host Godot Websocket Server
-The 'keepalive' mechanism should be handled from within the Godot server build
-by pinging google or something else.
+An experimental Heroku buildpack to deploy and host Godot server builds.
 
-
+## Resources used :
+- https://github.com/Abdera7mane/godot-server-buildpack
+- https://github.com/3ddelano/heroku-buildpack-godot
 ## Features:
-- Deploy Godot Websocket server code to heroku.
-- Host your deployed build. 
+- Deploy Godot server builds from source code to heroku.
+- Run Godot build from .pck file
 
 ## ENV vars:
-- PORT - port that the Godot websocket server listens on
+- PORT - port for the Godot server to listen on.
