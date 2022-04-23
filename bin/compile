@@ -13,7 +13,7 @@ CACHE_DIR=$2
 
 # 
 source "$BASEDIR/lib/misc_funcs.sh"
-source "$BASEDIR/lib/godotfuncs.sh"
+source "$BASEDIR/lib/godot_funcs.sh"
 
 export_env_dir() {
     env_dir=$1
@@ -60,14 +60,14 @@ then
     download_godot_templates $GODOT_VERSION
     export_godot_project
 
-# If Godotpack is present copy the pck file to BUILD_DIR/dist/server
+# If Godotpack is present copy the pck file to BUILD_DIR/dist
 elif [ -f $BUILD_DIR/Godotpack ]
 then
     # Copy pck file to dist/server/linux.pck
     # Godotpack should point to server.pck location
     pckpath=`cat $BUILD_DIR/Godotpack`
-    mkdir -p $BUILD_DIR/dist/server
-    cp $BUILD_DIR/$pckpath $BUILD_DIR/dist/server/linux.pck
+    mkdir -p $BUILD_DIR/dist
+    cp $BUILD_DIR/$pckpath $BUILD_DIR/dist/linux.pck
 fi
 
 download_godot_server $GODOT_VERSION
