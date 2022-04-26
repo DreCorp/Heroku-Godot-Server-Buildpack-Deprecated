@@ -64,7 +64,6 @@ function download_godot_templates() {
 }
 
 function export_godot_project() {
-    # here we can build both server and client
     OUTPUT_DEST="$BUILD_DIR/dist"
     OUTPUT_FILE="$OUTPUT_DEST/linux.pck"
     
@@ -77,6 +76,6 @@ function export_godot_project() {
     # Export the project to Linux/X11 
     # (The project must have a Linux/X11 export template setup)
     # source: $BUILD_DIR/dist
-    # destinations: $OUTPUT_SERVER_FILE
+    # destinations: $OUTPUT_FILE
     $BUILD_DIR/godot_headless.64 --path "$BUILD_DIR" --export-pack "Linux/X11" "$OUTPUT_FILE" || exit 1
 }
