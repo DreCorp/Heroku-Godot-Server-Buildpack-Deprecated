@@ -4,9 +4,9 @@
 # bin/compile BUILD_DIR CACHE_DIR ENV_DIR
 
 # The contents of CACHE_DIR will be persisted between builds. 
-# You can cache the results of long processes like dependency resolution here 
-# to speed up future builds.
+# You can cache the results of long processes like dependency resolution here to speed up future builds.
 
+#
 BASEDIR=$(dirname $(dirname "$0"))
 BUILD_DIR=$1
 CACHE_DIR=$2
@@ -15,6 +15,7 @@ CACHE_DIR=$2
 source "$BASEDIR/lib/misc_funcs.sh"
 source "$BASEDIR/lib/godot_funcs.sh"
 
+#
 export_env_dir() {
     env_dir=$1
     whitelist_regex=${2:-''}
@@ -45,29 +46,7 @@ if [ -z "$GODOT_VERSION" ]; then
 fi
 
 
-# Check if Godot project file is present
-if [ -f $BUILD_DIR/project.godot ]
-then
-    # Export from source
-    
-    # Ensure exports_presets.cfg exists
-    if [ ! -f $BUILD_DIR/export_presets.cfg ]; then
-        echo "You must have a exports_presets.cfg file present to export from source and it should have an export named Linux/X11."
-        exit 1
-    fi
-    
-    download_godot_headless $GODOT_VERSION
-    download_godot_templates $GODOT_VERSION
-    export_godot_project
-
-# If Godotpack is present copy the pck file to BUILD_DIR/dist
-elif [ -f $BUILD_DIR/Godotpack ]
-then
-    # Copy pck file to dist/server/linux.pck
-    # Godotpack should point to server.pck location
-    pckpath=`cat $BUILD_DIR/Godotpack`
-    mkdir -p $BUILD_DIR/dist
-    cp $BUILD_DIR/$pckpath $BUILD_DIR/dist/linux.pck
-fi
-
+download_godot_headless $GODOT_VERSION
+download_godot_templates $GODOT_VERSION
+export_godot_project
 download_godot_server $GODOT_VERSION
