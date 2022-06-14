@@ -9,5 +9,5 @@
 cat << EOF
 ---
 default_process_types:
-    web: echo \$PORT && lib/start \$PORT
+    web: lib/start ${PORT}
 EOF
