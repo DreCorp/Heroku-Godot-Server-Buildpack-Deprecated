@@ -1,8 +1,7 @@
 #!/usr/bin/env
 
-# required config vars
-GODOT_VERSION=${0:-${GODOT_VERSION:-"3.4.4"}}
+# required config var
 PORT=${1:-${PORT:-3000}}
 
 # pass heroku config vars after the 'linux.pck'
-(./godot_server.64 --path "dist" --main-pack "linux.pck" "$GODOT_VERSION" "$PORT")
+(./godot_server.64 --path "dist" --main-pack "linux.pck" "$PORT")
