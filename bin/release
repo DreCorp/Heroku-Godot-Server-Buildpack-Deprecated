@@ -9,5 +9,5 @@
 cat << EOF
 ---
 default_process_types:
-    web: lib/start $GODOT_VERSION $PORT
+    web: lib/start $PORT $GODOT_VERSION
 EOF
