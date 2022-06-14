@@ -10,7 +10,6 @@
 ## Features:
 - Deploy Godot project exports from source to Heroku.
 - Run with [Godot server executable](https://godotengine.org/download/server).
-- Pass Heroku config vars to exported project on start.
 ## Required Heroku config vars:
 - GODOT_VERSION
 - PORT
