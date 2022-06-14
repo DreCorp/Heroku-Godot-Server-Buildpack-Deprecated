@@ -33,10 +33,10 @@ export_env_dir() {
 export_env_dir $3
 
 # make and copy buildpacks libs
-mkdir -p $BUILD_DIR/lib
-cp $BASEDIR/lib/start $BUILD_DIR/lib/start
+#mkdir -p $BUILD_DIR/lib
+#cp $BASEDIR/lib/start $BUILD_DIR/lib/start
 # auth /lib/start
-chmod +x $BUILD_DIR/lib/start
+#chmod +x $BUILD_DIR/lib/start
 
 
 # Ensure GODOT_VERSION is set
