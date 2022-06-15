@@ -39,17 +39,20 @@ cp $BASEDIR/lib/start $BUILD_DIR/lib/start
 chmod +x $BUILD_DIR/lib/start
 
 
-# Copy ENV vars
-mkdir -p $BUILD_DIR/config
-touch $BUILD_DIR/server.cfg
-#
-cat "[CONFIG]" > $BUILD_DIR/server.cfg
-#
+# Copy ENV vars to $BUILD_DIR/server.cfg
+# create folder and file
+CONF=$BUILD_DIR/SERVER.cfg
+touch $CONF
+# append [CONFIG] section
+echo "[CONFIG]" > $CONF
+# append ENV vars to config file as strings:
+# PORT="3000" etc
 for e in $(ls $3); do
-    cat "$e=$(cat $3/$e)" > $BUILD_DIR/server.cfg
+    echo "$e=\"$(cat $3/$e)\"" >> $CONF
 done
+
 #
-cp -r $3/* $BUILD_DIR/config
+#cp -r $3/* $BUILD_DIR/config
 
 
 
