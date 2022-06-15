@@ -41,7 +41,17 @@ chmod +x $BUILD_DIR/lib/start
 
 # Copy ENV vars
 mkdir -p $BUILD_DIR/config
+touch $BUILD_DIR/server.cfg
+#
+cat "[CONFIG]" > $BUILD_DIR/server.cfg
+#
+for e in $(ls $3); do
+    cat "$e=$(cat $3/$e)" > $BUILD_DIR/server.cfg
+done
+#
 cp -r $3/* $BUILD_DIR/config
+
+
 
 # Ensure GODOT_VERSION is set
 if [ -z "$GODOT_VERSION" ]; then
