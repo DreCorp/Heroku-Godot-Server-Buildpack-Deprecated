@@ -12,7 +12,6 @@
 - Run with [Godot server executable](https://godotengine.org/download/server).
 ## Required Heroku config vars:
 - GODOT_VERSION
-- PORT
 
 ## Required Godot export template:
 - [Linux/X11](https://docs.godotengine.org/en/stable/tutorials/export/exporting_for_linux.html?highlight=export%20template)

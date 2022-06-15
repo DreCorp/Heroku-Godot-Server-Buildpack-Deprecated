@@ -6,6 +6,7 @@
 # addons is a list of default addons to install.
 # default_process_types is a hash of default Procfile entries.
 # This script will only be run if present.
+# $PORT is set by Heroku
 cat << EOF
 ---
 default_process_types:
