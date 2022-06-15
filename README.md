@@ -1,6 +1,6 @@
 # **Heroku Godot Server buildpack**
 
-[Heroku](https://heroku.com) [buildpack](https://devcenter.heroku.com/articles/buildpacks) for continuos deployment of [Godot](https://godotengine.org) projects utilizing [WebSocketServer](https://docs.godotengine.org/en/stable/classes/class_websocketserver.html#class-websocketserver).
+[Heroku](https://heroku.com) [buildpack](https://devcenter.heroku.com/articles/buildpacks) for continuous deployment of [Godot](https://godotengine.org) projects utilizing [WebSocketServer](https://docs.godotengine.org/en/stable/classes/class_websocketserver.html#class-websocketserver).
 
 ## Features:
 - Deploy Godot projects from source to Heroku.
