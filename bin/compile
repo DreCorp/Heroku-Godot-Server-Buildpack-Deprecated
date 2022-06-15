@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Usage:
-# bin/compile BUILD_DIR CACHE_DIR ENV_DIR
+# bin/compile BUILD_DIR CACHE_DIR
 
 # The contents of CACHE_DIR will be persisted between builds. 
 # You can cache the results of long processes like dependency resolution here to speed up future builds.
@@ -33,10 +33,10 @@ export_env_dir() {
 export_env_dir $3
 
 # make and copy buildpacks libs
-#mkdir -p $BUILD_DIR/lib
-#cp $BASEDIR/lib/start $BUILD_DIR/lib/start
+mkdir -p $BUILD_DIR/lib
+cp $BASEDIR/lib/start $BUILD_DIR/lib/start
 # auth /lib/start
-#chmod +x $BUILD_DIR/lib/start
+chmod +x $BUILD_DIR/lib/start
 
 
 # Ensure GODOT_VERSION is set
