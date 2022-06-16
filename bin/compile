@@ -39,23 +39,6 @@ cp $BASEDIR/lib/start $BUILD_DIR/lib/start
 chmod +x $BUILD_DIR/lib/start
 
 
-# Copy ENV vars to $BUILD_DIR/server.cfg
-# create folder and file
-CONF=$BUILD_DIR/SERVER.cfg
-touch $CONF
-# append [CONFIG] section
-echo "[CONFIG]" > $CONF
-# append ENV vars to config file as strings:
-# PORT="3000" etc
-for e in $(ls $3); do
-    echo "$e=\"$(cat $3/$e)\"" >> $CONF
-done
-
-#
-#cp -r $3/* $BUILD_DIR/config
-
-
-
 # Ensure GODOT_VERSION is set
 if [ -z "$GODOT_VERSION" ]; then
     echo "You must set the GODOT_VERSION config var to a valid Godot stable release (eg. 3.4.2)!"
