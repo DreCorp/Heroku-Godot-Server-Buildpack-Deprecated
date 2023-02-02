@@ -1,4 +1,9 @@
-# **Heroku Godot Server buildpack**
+# **Heroku Godot Server buildpack - DEPRECATED**
+
+## :no_entry_sign: This repo is no longer maintained or supported! :no_entry_sign:
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-red.svg)](https://bitbucket.org/lbesson/ansi-colors)
+#
 
 [Heroku](https://heroku.com) [buildpack](https://devcenter.heroku.com/articles/buildpacks) for continuous deployment of [Godot](https://godotengine.org) projects utilizing [WebSocketServer](https://docs.godotengine.org/en/stable/classes/class_websocketserver.html#class-websocketserver).
 
